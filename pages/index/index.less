@@ -1,0 +1,290 @@
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: normal;
+    // color: var(--themeColor);
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.content{
+
+    .card{
+        background-color: var(--cardColor);
+        box-shadow: 6rpx 6rpx 15rpx 3rpx rgba(0,0,0,0.21);
+        border-radius: 15rpx;
+        z-index: 1;
+        position:relative;
+    }
+
+
+    transition: 0.3s opacity ease-out;
+    overflow: hidden;
+    .header{
+
+
+        position: relative;
+        z-index: 5;
+        // margin-left: 20rpx;
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: var(--themeColor);
+        .text{
+            color: var(--bgColor);
+            font-size: 20px;
+    
+        }
+    }
+    
+    
+    
+    
+    
+    
+    .index_swiper{
+        // margin-top:20rpx;
+        position:relative;
+        z-index: 1;
+        height: 300rpx;
+        
+        // border-radius: 30rpx;
+        swiper{
+            width: 100%;
+            height: 300rpx;
+            // height: 260rpx;
+            // height: 100%;
+            display: block;
+            image{
+                // position: relative;
+                height: 300rpx;
+                // border-radius: 30rpx;
+                // height: 100%;
+                width: 100%;
+                display: block; //防止缝隙
+                
+                // vertical-align: top;
+                // height: 230rpx;
+            }
+            image:after{
+                z-index: 100;
+                position: absolute;
+                width: 100%;
+                height: 300rpx;
+                
+                top: 0;//absolute定位中用 top left 来定位 
+                //而不是margin！相对定位采用margin hebiedediv有关系 绝对定位与父元素边框有关系 所以margin没有达到效果
+                left: 0;
+                content: "";
+                background: linear-gradient(rgba(240,248,255,0) 80%, rgba(240,248,255,1.0) 100%);
+            }
+        }
+    }
+    
+    
+    
+    .index_wrapper{
+        position:relative;
+        padding: 10px; //实践结果 胶囊的边距确实是10px
+        margin-top: -20rpx;
+        .top_card{
+            position:relative;
+            padding: 20rpx;
+       
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            .label{
+                font-size: 40rpx;
+                font-weight: bolder;
+                .participate{
+                    font-size: 20rpx;
+                    text-align: right;
+                    color: var(--labelColor);
+                }
+            }
+    
+            .div_1{
+                margin-top: 20rpx;
+                display: flex;
+                flex-direction: row;
+    
+                z-index: 2;
+                padding-bottom: 10rpx;
+                border-bottom: 1px solid var(--lineColor);
+                text-align:center;
+                font-size: 30rpx;
+                .score{
+                    flex: 1;
+                    .scoreNum{
+                        font-weight: bolder;
+                        color: var(--themeColor);
+                        display: block;
+                        font-size: 60rpx;
+                    }
+                }
+                .srank{
+                    flex: 1;
+                    .value{
+                        font-weight: bolder;
+                        color: var(--themeColor);
+                        display: block;
+                        font-size: 60rpx;
+                    }
+                }
+                .prank{
+                    flex: 1;
+                    .value{
+                        font-weight: bolder;
+                        color: var(--themeColor);
+                        display: block;
+                        font-size: 60rpx;
+                    }
+                }
+            }
+            .div_2{
+                padding-top: 20rpx;
+                display: flex;
+                flex-direction: column;
+                z-index: 1;
+                .cname{
+                    font-weight: bolder;
+                }
+                .ccid{
+                    font-size: 20rpx;
+                    color: var(--labelColor);
+                }
+                .evaluation_wrapper{
+                    margin-top: 20rpx;
+                    display: grid;
+                    grid-template-columns: repeat(2,375rpx);
+                    grid-template-rows: repeat(3,30rpx);
+                    grid-row-gap: 10rpx;
+                    z-index: 2;
+                    padding-bottom: 10rpx;
+                    border-bottom: 1px solid var(--lineColor);
+                    .evaluation{
+                        font-size: 25rpx;
+                        .value{
+                            
+                            text-align:left;
+                            font-weight: bolder;
+                            color: var(--themeColor);
+                        }
+                    }
+                }
+                
+                
+                
+            }
+        }
+        .achievement{
+            margin-top:20rpx;
+            
+            min-height: 200rpx;
+            width: 100%;
+            // height: 600rpx;
+            padding: 10rpx 20rpx 20rpx 20rpx;
+            // display: flex;
+            // flex-direction: column;
+            .label{
+                // flex: 1;
+                font-size: 40rpx;
+                font-weight: bolder;
+                // background-color: blueviolet;
+                .text{
+                    font-size: 20rpx;
+                    text-align: right;
+                    color: var(--labelColor);
+                }
+                .participate{
+                    font-size: 20rpx;
+                    text-align: right;
+                    font-weight: bold;
+                    color: var(--themeColor);
+                }
+                
+            }
+    
+            .content{
+                margin-top: 20rpx;
+                
+                // background-color: blue;
+                // .grade{
+                //     flex: 3;
+                //     font-size: 200rpx;
+                //     height: 250rpx;
+                //     line-height: 250rpx;
+    
+                //     color: var(--themeColor);
+                //     font-weight: bolder;
+                //     text-align: center;
+                //     border-radius: 8px;
+                //     border: 5rpx solid var(--themeColor);
+                    
+                    
+                // }
+             
+                
+                .items_wrapper{
+                    // margin-left: 20rpx;
+                    flex: 5;
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+                    // color: var(--labelColor);
+                    .items{
+                        flex: 1;
+                        border-left: 1.1px solid var(--lineColor);
+                        border-right: 1.1px solid var(--lineColor);
+                        .item_iconfont{
+                            font-size: 120rpx;
+                            // padding-bottom: -10rpx;
+                        }
+                        .name{
+                            // padding-top: 20rpx;
+                            margin-top: -20rpx;
+                            font-size: 25rpx;
+                            margin-bottom: 20rpx;
+                        }
+                        .value{
+                            // margin-top: 50rpx;
+                            font-size: 80rpx;
+                            color: var(--themeColor);
+                            font-weight: bolder;
+                            font-family: 'STXinwei', Courier, monospace;
+                        }
+                    }
+            
+                }
+                .info{
+                    font-size: 25rpx;
+                    margin-top: 10rpx;
+                    flex: 1;
+                    .value{
+                        // font-weight: bold;
+                        color: var(--themeColor);
+                }
+    
+                }
+            }
+            
+        }
+    }
+}
+
+.background{
+    display:flex;
+    height: 100vh;                        //设置布局满屏
+    justify-content: center;
+    align-items:center;
+   position: fixed;
+    .preface{
+        
+        width:100%;
+    }
+}

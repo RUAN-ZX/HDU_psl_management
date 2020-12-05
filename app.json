@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/achievement/achievement",
+    "pages/evaluation/evaluation",
+    "pages/me/me",
+    
+    "pages/emailChange/emailChange",
+    "pages/pwdChange/pwdChange",
+    "pages/emailChangeLogin/emailChange",
+    "pages/pwdChangeLogin/pwdChange",
+    "pages/feedback/feedback",
+    "pages/404/404",
+    "pages/search/search"
+  ],
+  "entryPagePath": "pages/index/index",
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#91b4ff",
+    "navigationBarBackgroundColor": "#91b4ff",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Life",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "最新数据",
+        "iconPath": "icon/index_.jpg",
+        "selectedIconPath": "icon/index.jpg"
+      },
+      {
+        "pagePath": "pages/evaluation/evaluation",
+        "text": "学评教",
+        "iconPath": "icon/feeling_.jpg",
+        "selectedIconPath": "icon/feeling.jpg"
+      },
+      {
+        "pagePath": "pages/achievement/achievement",
+        "text": "业绩考核",
+        "iconPath": "icon/consult_.jpg",
+        "selectedIconPath": "icon/consult.jpg"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "icon/me_.jpg",
+        "selectedIconPath": "icon/me.jpg"
+      }
+    ],
+    "color": "#bfbfbf",
+    "selectedColor": "#91b4ff",
+    "borderStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,139 @@
+
+<!-- style="opacityPreface:{{opacityPreface}};z-index:{{zIndex}}" -->
+<view class="background">
+    <image 
+        class="preface" 
+        src="../../jpg/login/loading.gif"
+        mode="widthFix"
+    >
+    </image>
+</view>
+
+<view style="opacity:{{contentOpacity}}"
+    class="content">
+    <view class="header" style="padding-top: {{cap_info.top}}px;" >
+        <view class="text"
+        style="margin-left:{{cap_info.height}}px;">
+            {{name}}老师，欢迎您
+        </view>
+    </view>
+    
+    <view class="transition index_swiper">
+        <swiper autoplay circular>
+            <swiper-item wx:for="{{swiperList}}" wx:key="index">
+                <navigator>
+                    <image mode="scalltoFill" src="{{item}}"></image>
+    
+                </navigator>
+    
+            </swiper-item>
+    
+        </swiper>
+    </view>
+    
+    <view class="index_wrapper">
+        <view class="card top_card">
+            <view class="label">
+                {{elabel}}
+                <span class="participate">
+                    {{e.participate.name}}:
+                    {{e.participate.value}}
+                </span>
+            </view>
+            <view class="div_1 ">
+                <view class="score">
+                    {{e.score.name}}
+                    
+                    <span class="scoreNum">
+                        {{e.score.value}}
+                    </span>
+                </view>
+                <view class="srank">
+                    {{e.srank.name}}
+                    <span class="value">{{e.srank.value}}</span>
+                </view>
+    
+                <view class="prank">
+                    {{e.prank.name}}
+                    <span class="value">{{e.prank.value}}</span>
+    
+                </view>
+            </view>
+    
+            <view 
+                wx:for="{{c}}"
+                wx:key="id"
+                class="div_2"
+                wx:for-item="item">
+                <view class="cname">
+                    {{item.name}}
+                </view>
+                <view class="ccid">
+                    {{item.cid}}
+                </view>
+                <view class="evaluation_wrapper">
+                    <view 
+                        wx:for="{{item.item}}"
+                        wx:for-item="items"
+                        wx:key="index"
+                        class="evaluation">
+                            {{items.name}}
+                        <span class="value">
+                            {{items.value}}
+                        </span>
+                    </view>
+                </view>
+            </view>
+    
+    
+        </view>
+    
+    
+        <view class="card achievement">
+            <view class="label">
+                {{a.alabel}}
+                <span class="participate">
+                    {{a.accident}}
+                </span>
+                <span class="text">
+                    出现教学事故
+                </span>
+            </view>
+        
+            <view class="content">
+                <view class="grade">
+                    {{a.agrade}}
+                    
+                </view>
+                <view class="items_wrapper">
+                    <view class="items"
+                        wx:for="{{a.aitem}}"
+                        wx:for-item="items"
+                        wx:key="index">
+                        <view class="item_iconfont iconfont {{items.icon}}">
+    
+                        </view>
+                        
+                        <view class="name">
+                            {{items.name}}
+                        </view>
+                        
+                        <span class="value">
+                            {{items.value}}
+                        </span>
+                    </view>
+    
+                    
+                </view>
+                <view class="info">
+                    备注信息 <span class="value">
+                        {{a.info}}
+                    </span>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+

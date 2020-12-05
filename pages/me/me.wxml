@@ -1,0 +1,47 @@
+<!-- 已经登陆的 -->
+<view class="background"></view>
+
+<!-- 3:2 -->
+<view class="header">
+    <image class="imageHeader" src="../../jpg/me.jpg" mode="scaleToFill" lazy-load="true">
+        
+    </image>
+    <view class="user">
+        <image class="avatar" src="../../jpg/avatarDefault.jpg" mode="scaleToFill" lazy-load="true">
+
+        </image>
+        <view class="name">
+            {{name}}
+        </view>
+    </view>
+
+    <view class="info">
+        <view 
+            class="item"
+            wx:for="{{list_info}}"
+            wx:key="index"
+            
+        >
+            <view class="value">{{item.name}}：{{item.value}}</view>
+            <!-- <view class="name"></view> -->
+        </view>
+
+    </view>
+    
+
+</view>
+
+<view class="card card_1">
+        <view 
+            wx:for="{{list_card1}}" 
+            class="div_wrapper_1"
+            wx:key="index"
+            data-index="{{index}}"
+            bindtap = "btnTap"
+            >
+            <span class="div_1_iconfont iconfont {{item.src}}"></span>
+            <view class="div_text_1">{{item.text}}</view>
+            
+        </view>
+
+</view>

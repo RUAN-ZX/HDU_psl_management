@@ -1,0 +1,99 @@
+<view class="background">
+    
+</view>
+
+<view class="content">
+    <view 
+        class="shield"
+        style="z-index:{{z_shield}};background-color: rgba(0, 0, 0, {{opacity_shield}});"
+        bindtap = "shield"
+    >  </view>
+
+
+    <view class="header" style="padding-top: {{cap_info.top}}px;">
+        <view class="text"
+            
+            style="margin-left:{{cap_info.height}}px;">
+            <view class="years" bindtap="choiceChange_1">
+                {{combobox.name}}
+                <span class="iconfont icon-fukuan">
+
+                </span>
+            </view>
+            学评教
+        </view>
+    </view>
+
+    <view class="choice {{hide.choice_1}}">
+        <view 
+            class="title {{item_title.css}}" 
+            wx:for="{{combobox.child}}"
+            wx:for-item="item_title"
+            wx:for-index="index_title"
+            wx:key="index_title"
+            data-type="0"
+            bindtap = "filter"
+            data-choice = "{{index_title}}"
+            >
+            {{item_title.name}}
+        </view>
+    </view>
+
+    <view class="index_wrapper">
+        <view class="card top_card">
+            <view class="label">
+                {{elabel}}
+                <span class="participate">
+                    {{evaluation.participate.name}}:
+                    {{evaluation.participate.value}}
+                </span>
+            </view>
+            <view class="div_1 ">
+                <view class="score">
+                    {{evaluation.score.name}}
+                    
+                    <span class="scoreNum">
+                        {{evaluation.score.value}}
+                    </span>
+                </view>
+                <view class="srank">
+                    {{evaluation.srank.name}}
+                    <span class="value">{{evaluation.srank.value}}</span>
+                </view>
+
+                <view class="prank">
+                    {{evaluation.prank.name}}
+                    <span class="value">{{evaluation.prank.value}}</span>
+
+                </view>
+            </view>
+
+            <view 
+                wx:for="{{c}}"
+                wx:key="id"
+                class="div_2"
+                wx:for-item="item">
+                <view class="cname">
+                    {{item.name}}
+                </view>
+                <view class="ccid">
+                    {{item.cid}}
+                </view>
+                <view class="evaluation_wrapper">
+                    <view 
+                        wx:for="{{item.item}}"
+                        wx:for-item="items"
+                        wx:key="index"
+                        class="evaluation">
+                            {{items.name}}
+                        <span class="value">
+                            {{items.value}}
+                        </span>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+

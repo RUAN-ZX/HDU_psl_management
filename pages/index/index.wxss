@@ -1,0 +1,213 @@
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.content {
+  transition: 0.3s opacity ease-out;
+  overflow: hidden;
+}
+.content .card {
+  background-color: var(--cardColor);
+  box-shadow: 6rpx 6rpx 15rpx 3rpx rgba(0, 0, 0, 0.21);
+  border-radius: 15rpx;
+  z-index: 1;
+  position: relative;
+}
+.content .header {
+  position: relative;
+  z-index: 5;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--themeColor);
+}
+.content .header .text {
+  color: var(--bgColor);
+  font-size: 20px;
+}
+.content .index_swiper {
+  position: relative;
+  z-index: 1;
+  height: 300rpx;
+}
+.content .index_swiper swiper {
+  width: 100%;
+  height: 300rpx;
+  display: block;
+}
+.content .index_swiper swiper image {
+  height: 300rpx;
+  width: 100%;
+  display: block;
+}
+.content .index_swiper swiper image:after {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 300rpx;
+  top: 0;
+  left: 0;
+  content: "";
+  background: linear-gradient(rgba(240, 248, 255, 0) 80%, #f0f8ff 100%);
+}
+.content .index_wrapper {
+  position: relative;
+  padding: 10px;
+  margin-top: -20rpx;
+}
+.content .index_wrapper .top_card {
+  position: relative;
+  padding: 20rpx;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content .index_wrapper .top_card .label {
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.content .index_wrapper .top_card .label .participate {
+  font-size: 20rpx;
+  text-align: right;
+  color: var(--labelColor);
+}
+.content .index_wrapper .top_card .div_1 {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid var(--lineColor);
+  text-align: center;
+  font-size: 30rpx;
+}
+.content .index_wrapper .top_card .div_1 .score {
+  flex: 1;
+}
+.content .index_wrapper .top_card .div_1 .score .scoreNum {
+  font-weight: bolder;
+  color: var(--themeColor);
+  display: block;
+  font-size: 60rpx;
+}
+.content .index_wrapper .top_card .div_1 .srank {
+  flex: 1;
+}
+.content .index_wrapper .top_card .div_1 .srank .value {
+  font-weight: bolder;
+  color: var(--themeColor);
+  display: block;
+  font-size: 60rpx;
+}
+.content .index_wrapper .top_card .div_1 .prank {
+  flex: 1;
+}
+.content .index_wrapper .top_card .div_1 .prank .value {
+  font-weight: bolder;
+  color: var(--themeColor);
+  display: block;
+  font-size: 60rpx;
+}
+.content .index_wrapper .top_card .div_2 {
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.content .index_wrapper .top_card .div_2 .cname {
+  font-weight: bolder;
+}
+.content .index_wrapper .top_card .div_2 .ccid {
+  font-size: 20rpx;
+  color: var(--labelColor);
+}
+.content .index_wrapper .top_card .div_2 .evaluation_wrapper {
+  margin-top: 20rpx;
+  display: grid;
+  grid-template-columns: repeat(2, 375rpx);
+  grid-template-rows: repeat(3, 30rpx);
+  grid-row-gap: 10rpx;
+  z-index: 2;
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid var(--lineColor);
+}
+.content .index_wrapper .top_card .div_2 .evaluation_wrapper .evaluation {
+  font-size: 25rpx;
+}
+.content .index_wrapper .top_card .div_2 .evaluation_wrapper .evaluation .value {
+  text-align: left;
+  font-weight: bolder;
+  color: var(--themeColor);
+}
+.content .index_wrapper .achievement {
+  margin-top: 20rpx;
+  min-height: 200rpx;
+  width: 100%;
+  padding: 10rpx 20rpx 20rpx 20rpx;
+}
+.content .index_wrapper .achievement .label {
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.content .index_wrapper .achievement .label .text {
+  font-size: 20rpx;
+  text-align: right;
+  color: var(--labelColor);
+}
+.content .index_wrapper .achievement .label .participate {
+  font-size: 20rpx;
+  text-align: right;
+  font-weight: bold;
+  color: var(--themeColor);
+}
+.content .index_wrapper .achievement .content {
+  margin-top: 20rpx;
+}
+.content .index_wrapper .achievement .content .items_wrapper {
+  flex: 5;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.content .index_wrapper .achievement .content .items_wrapper .items {
+  flex: 1;
+  border-left: 1.1px solid var(--lineColor);
+  border-right: 1.1px solid var(--lineColor);
+}
+.content .index_wrapper .achievement .content .items_wrapper .items .item_iconfont {
+  font-size: 120rpx;
+}
+.content .index_wrapper .achievement .content .items_wrapper .items .name {
+  margin-top: -20rpx;
+  font-size: 25rpx;
+  margin-bottom: 20rpx;
+}
+.content .index_wrapper .achievement .content .items_wrapper .items .value {
+  font-size: 80rpx;
+  color: var(--themeColor);
+  font-weight: bolder;
+  font-family: 'STXinwei', Courier, monospace;
+}
+.content .index_wrapper .achievement .content .info {
+  font-size: 25rpx;
+  margin-top: 10rpx;
+  flex: 1;
+}
+.content .index_wrapper .achievement .content .info .value {
+  color: var(--themeColor);
+}
+.background {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.background .preface {
+  width: 100%;
+}

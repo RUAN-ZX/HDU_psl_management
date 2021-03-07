@@ -5,8 +5,8 @@ Page({
       Tpwd:"",
       hint:"",
       login:{
-        user:"请输入 职工号",
-        psw:"请输入 密码 或 邮箱验证码",
+        user:"请输入职工号",
+        psw:"请输入邮箱验证码",
         captcha:"获取验证码",
         
 
@@ -47,7 +47,7 @@ Page({
         this_.setHint("您的职工号似乎没输入:)")
       }
       else if(this.data.Tpwd==""){
-        this_.setHint("您的密码或者验证码似乎没输入:)")
+        this_.setHint("您的验证码似乎没输入:)")
       }
       else {
         wx.request({
@@ -100,7 +100,10 @@ Page({
               'content-type': 'application/x-www-form-urlencoded'
           },
           success: function(res) {
-            this_.setHint(res.data.info);
+            if(res.data.code==0){
+              this_.setHint(res.data.info);  
+            }
+            // console.log("2323");
           }
         })
       }

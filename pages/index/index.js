@@ -68,31 +68,33 @@ Page({
           'content-type': 'application/x-www-form-urlencoded'
       },
       success: function(res) {
-        var temp = res.data.info;
-        _this.setData({
-          a:{
-            alabel: temp.Atime+"-"+(temp.Atime+1)+" 教学业绩考核",
-            accident: temp=="否"?"有":"未", //已出现教学事故
-            info: temp.Ainfo,
-            aitem:[
-              {
-                icon:"icon-shuohuaqipao",
-                name:"考核等级",
-                value: temp.Agrade
-              },
-              {
-                icon:"icon-shuohuaqipao",
-                name:"教学学时",
-                value: temp.Ahour
-              },
-              {
-                icon:"icon-shuohuaqipao",
-                name:"考核分数",
-                value: temp.Ascore
-              }
-            ]
-          }
-        })
+        if(res.data.code==0){    
+          var temp = res.data.info;
+          _this.setData({
+            a:{
+              alabel: temp.Atime+"-"+(temp.Atime+1)+" 教学业绩考核",
+              accident: temp=="否"?"有":"未", //已出现教学事故
+              info: temp.Ainfo,
+              aitem:[
+                {
+                  icon:"icon-shuohuaqipao",
+                  name:"考核等级",
+                  value: temp.Agrade
+                },
+                {
+                  icon:"icon-shuohuaqipao",
+                  name:"教学学时",
+                  value: temp.Ahour
+                },
+                {
+                  icon:"icon-shuohuaqipao",
+                  name:"考核分数",
+                  value: temp.Ascore
+                }
+              ]
+            }
+          })
+        }
       },
       fail:function (res) {
         console.log("fail AgetLast years"+res);
@@ -110,8 +112,9 @@ Page({
           'content-type': 'application/x-www-form-urlencoded'
       },
       success: function(res) {
-        var a = [];
-        for (var _item of res.data.info){
+        if(res.data.code==0){
+          var a = [];
+          for (var _item of res.data.info){
           a.push({
             name: _item.Cname,
             cid: _item.CCid,
@@ -142,10 +145,11 @@ Page({
               }
             ]
           })
+          }
+          _this.setData({
+            c : a
+          })
         }
-        _this.setData({
-          c : a
-        })
       },
       fail:function (res) {
         console.log("fail CgetLast years"+res);
@@ -163,26 +167,28 @@ Page({
           'content-type': 'application/x-www-form-urlencoded'
       },
       success: function(res) {
-        _this.setData({
-          e:{
-            srank:{
-              name:"学校排名",
-              value:res.data.info.Esrank
+        if(res.data.code==0){
+          _this.setData({
+            e:{
+              srank:{
+                name:"学校排名",
+                value:res.data.info.Esrank
+              },
+              prank:{
+                name:"学院排名",
+                value:res.data.info.Eprank
+              },
+              score:{
+                name:"总共得分",
+                value:res.data.info.Escore
+              },
+              participate:{
+                name:"参评人次",
+                value:res.data.info.Eparticipate
+              },
             },
-            prank:{
-              name:"学院排名",
-              value:res.data.info.Eprank
-            },
-            score:{
-              name:"总共得分",
-              value:res.data.info.Escore
-            },
-            participate:{
-              name:"参评人次",
-              value:res.data.info.Eparticipate
-            },
-          },
-        })
+          })
+        }
       },
       fail:function (res) {
         console.log("fail EgetLast years"+res);
@@ -222,11 +228,13 @@ Page({
           'content-type': 'application/x-www-form-urlencoded'
       },
       success: function(res) {
-        var a = [];
-        for (var _item of res.data.info){
-          a.push({name:_item,css:""})
+        if(res.data.code==0){
+          var a = [];
+          for (var _item of res.data.info){
+            a.push({name:_item,css:""})
+          }
+          getApp().Ayear = a;
         }
-        getApp().Ayear = a;
       },
       fail:function (res) {
         console.log("fail EGetAll years"+res);

@@ -14,7 +14,7 @@
     "pages/404/404",
     "pages/search/search"
   ],
-  "entryPagePath": "pages/index/index",
+  "entryPagePath": "pages/login/login",
   "window": {
     "backgroundTextStyle": "dark",
     "backgroundColor": "#91b4ff",

@@ -101,10 +101,7 @@
             </view>
         
             <view class="content">
-                <view class="grade">
-                    {{a.agrade}}
-                    
-                </view>
+        
                 <view class="items_wrapper">
                     <view class="items"
                         wx:for="{{a.aitem}}"

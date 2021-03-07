@@ -16,8 +16,11 @@ function Decrypt(word) {
   return decryptedStr.toString();
 }
 //加密方法
-
-
+const Operator = 'ryan';
+const Signature = 'oWAoDyEsVk41x0U5LcueOPVfm7iEJzOD';
+const crypto = Operator+":"+Signature;
+var encryptedHexStr = CryptoJS.enc.Hex.parse(crypto);
+console.log("111"+CryptoJS.enc.Base64.stringify(encryptedHexStr));
 
 
 function Encrypt(word) {
@@ -29,20 +32,3 @@ function Encrypt(word) {
   });
   return encrypted.ciphertext.toString().toUpperCase();
 }
-
-var name = "03077";
-var data = "205541";
-var password = "2020-10-1";
-var str = {
-    "Tid":name,
-    "Tpwd":data
-};
-
-console.log(JSON.stringify(str));
-
-
-var str_en = Encrypt(JSON.stringify(str));
-
-console.log(str_en);
-console.log(JSON.parse(Decrypt(str_en)));
-console.log(JSON.parse(Decrypt(str_en)).name);

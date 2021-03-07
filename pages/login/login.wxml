@@ -12,7 +12,7 @@
             placeholder-class="text" 
             type="text" 
             placeholder="{{login.user}}"
-            bindblur ="TidInput"/>
+            bindinput ="TidInput"/>
     </view>
 
     <view class="psw">
@@ -21,7 +21,7 @@
             placeholder-class="password" 
             type="password" 
             placeholder="{{login.psw}}"
-            bindblur = "TpwdInput"/>
+            bindinput = "TpwdInput"/>
         <view class="captcha" bindtap = "getCaptcha">
             {{login.captcha}}
         </view>
